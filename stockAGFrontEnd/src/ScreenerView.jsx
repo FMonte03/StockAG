@@ -12,7 +12,8 @@ import {
   X,
 } from 'lucide-react';
 
-const API_BASE_URL = 'http://127.0.0.1:8000/api';
+const VITE_API_BASE = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
+const API_BASE_URL = VITE_API_BASE.endsWith('/api') ? VITE_API_BASE : `${VITE_API_BASE.replace(/\/$/, '')}/api`;
 
 const formatNumber = (num) => {
   if (num === null || num === undefined) return 'N/A';
