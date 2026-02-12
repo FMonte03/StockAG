@@ -448,7 +448,7 @@ const ScreenerView = () => {
               </thead>
               <tbody>
                 {loading ? (
-                  <tr><td colSpan="6" className="loading-message">Loading Data...</td></tr>
+                  <tr><td colSpan="6" className="loading-message">Loading Data... Will take a minute for endpoint service to start up. Sorry free tier.</td></tr>
                 ) : stocks.length === 0 ? (
                   <tr><td colSpan="6" className="loading-message">No stocks found matching filters.</td></tr>
                 ) : (
